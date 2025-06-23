@@ -1,0 +1,16 @@
+services:
+  db:
+    image: postgres:15
+    container_name: scouting-assistant-db-docker
+    restart: unless-stopped
+    ports:
+      - "5432:5432"
+    environment:
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: postgres
+      POSTGRES_DB: scouting-assistant-db
+    volumes:
+      - pgdata:/var/lib/postgresql/data
+
+volumes:
+  pgdata:
