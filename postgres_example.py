@@ -21,7 +21,7 @@ cur = conn.cursor()
 
 # Create table
 cur.execute("""
-    DROP TABLE * CASCADE;
+    DROP TABLE lol_esports_matches CASCADE;
 """)
 
 # Clean up
